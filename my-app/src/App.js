@@ -2,7 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 export const App = () => {
+	// Императивный стиль: создание объекта Date и вызов метода getFullYear
+	const currentYear = new Date().getFullYear();
 	return (
+		// Декларативный стиль: разметка JSX описывает, что должно быть отрисовано
 		<div className="App">
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
@@ -17,6 +20,8 @@ export const App = () => {
 				>
 					Learn React
 				</a>
+				{/* Декларативный стиль: использование переменной currentYear */}
+				<p> {currentYear}</p>
 			</header>
 		</div>
 	);
